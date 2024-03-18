@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #111317;
+  --primary-color-light: #1f2125;
+  --primary-color-extra-light: #35373b;
+  --secondary-color: #f9ac54;
+  --secondary-color-dark: #d79447;
+  --text-light: #d1d5db;
+  --white: #ffffff;
+   --max-width: 1200px; 
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+     background-color: var(--primary-color); 
+    /* background-color: white;  
+     overflow: hidden;  */
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  nav {
+    
+    padding: 2.5em;
+    min-height: 30vh;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .dropdown {
+      min-width: 15em;
+      position: relative;
+      margin: 2em;
+  }
+
+  .dropdown * {
+      box-sizing: border-box;
+  }
+
+  .select {
+    background-color: var(--secondary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px #3f3f3f solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  /* Clicked styles (added later in JS) */
+  .select-clicked {
+      border:  var(--secondary-color-dark);
+      box-shadow: 0 0 0.8em #2649a26;
+
+
+  }
+
+  .select:hover {
+    background: var(--secondary-color-dark);
+  }
+
+  .caret {
+      width: 0;
+      height: 0;
+      border-bottom: 5px solid transparent;
+      border-left: 6px solid #fff;
+      border-right: 5px solid transparent;
+      border-top: 5px solid transparent;
+      transition: 0.3s;
+  }
+
+  /* Rotate styles (added later in JS) */
+
+  .caret-rotate {
+      transform: rotate(90deg);
+  }
+
+  .menu {
+      list-style: none;
+      padding: 0em 0.5em;
+      background: #292929;
+      
+      box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+      border-radius: 0.5em;
+      color: #878787;
+      position: absolute;
+      top: 3em;
+      left: 0;
+      width: 100%;
+      height: 0;
+      transition: 300ms cubic-bezier(0.77, 0, 0.18, 1);  
+      z-index: 1;
+      overflow-y: scroll; 
+  }
+
+  .menu::-webkit-scrollbar {
+      width: 8px;
+  }
+
+  /* Track */
+
+  .menu::-webkit-scrollbar-track {
+      background: #404040;
+  }
+
+  /* Handle */
+
+  .menu::-webkit-scrollbar-thumb {
+      background: #727272;
+  }
+
+  /* Handle on hover */
+
+  .menu::-webkit-scrollbar-thumb:hover {
+      background: #9e9e9e;
+  }
+
+  
+  .menu li {
+      padding: 0.7em;
+      margin: 0.3em 0;
+      border-radius: 0.5em;
+      cursor: pointer;
+  }
+
+  .menu li:hover {
+      background: #242424;
+  }
+
+
+
+  /* Active styles (added later in JS) */
+
+  .active {
+      background: #1e1e1e;
+      color: #fff;
+  }
+
+  .text-fade-in {
+      animation: textFade 300ms ease-out;
+  }
+
+  /* Open styles (added later in JS) */
+
+  .menu-open {
+      border: 1px #383838 solid;
+      height: 15em;
+  }
+
+  @keyframes textFade {
+      0% {
+          transform: translateX(-1em);
+          opacity: 0;
+      }
+
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  /* MAin Section */
+    .main{
+
+        position: relative;
+        padding: 100px;
+        width: 100%;
+  }
+
+  /* Table section */
+
+  .orders-section {
+      margin-top: 20px;
+      text-transform: capitalize;
+
+  }
+
+  .orders-list {
+
+        background: #292929;
+      
+      box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+      
+      color: #878787;
+
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      
+      border-radius: 10px;
+      
+  }
+
+  .table {
+      border-collapse:collapse;
+      margin: 25px 0;
+      font-size: 15px;
+      min-width: 100%;
+      overflow: hidden;
+      border-radius: 5px 5px 0 0;
+  }
+
+  table thead tr {
+    color: #fff;
+      background: #f9ac54;
+      text-align: left;
+      font-weight: bold;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 15px;
+  }
+
+  .table tbody tr {
+      border-bottom: 1px solid transparent;
+      
+  }
+
+   .table tbody tr:nth-of-type(odd) {
+      background: #f3f3f33d;
+  } 
+
+  .table tbody tr.active-line {
+      font-weight: bold;
+      color: #f9ac54;
+  }
+
+  .table tbody tr:last-of-type{
+      border-bottom: 2px solid #f9ac54;
+  }
+
+  .table button{
+      padding: 6px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid #f9ac54;
+      color: #fff;
+  }
+
+  .table button:hover {
+      /* background: #4ad489; */
+      background:  #d79447;
+      color: #fff;
+      transition: 0.5rem;
+  }
+
+ 
+
+
+
+
+  
+

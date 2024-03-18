@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="FirstPage.css" type="text/css">
+</head>
+
+<body>
+
+    <nav>
+
+
+            <div class= "nav-logo">
+                <a href= "#"><img class= "logo-img" src= "download.png" alt= "logo"></a>
+            </div>
+
+            <ul class= "nav-links">
+                <li class= "link"><a href= "#">Home</a></li>
+                <li class= "link"><a href= "#">New</a></li>
+                <li class= "link"><a href= "#">Browse</a></li>
+                <li class= "link"><a href= "#">Search</a></li>
+
+                <li class= "link"><a href= "#">Preferences</a></li>
+                <!--<li class= "link"><a href= "#">Log out</a></li> -->
+            </ul>
+
+           <button class= "btn">Create Customer</button>
+            
+        
+        </nav>
+        <!--Body-->
+        <div class="explore_menu">
+
+            <div class="explore_submenu">
+              <span><i class="ri-boxing-fill"></i></span>
+              <h4>IP/MPLS</h4>
+              <p>
+                Multiprotocol Label Switching- Layer 3 VPN Solutions
+              </p>
+              <a href="ip-mpls.html">To IP/MPLS Products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="explore_submenu">
+              <span><i class="ri-heart-pulse-fill"></i></span>
+              <h4>INTERNET</h4>
+              <p>
+                Data of the Customers connected to the Vodafone IP-Backbone
+              </p>
+              <a href="internet.html">To Internet Products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="explore_submenu">
+              <span><i class="ri-run-line"></i></span>
+              <h4>EBS</h4>
+              <p>
+                Ethernet Business Service/Switched Ethernet- Layer 2 VPN Solutions
+              </p>
+              <a href="ebs.html">To EBS Products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            
+          </div>
+
+          <!--Quicksearch Form-->
+          <div>
+              <form id= "quick-search-form" name= "quicksearchForm" action= "customer-list.html" onsubmit= " if (this.quicksearch.value === '') {
+                  alert ('Please enter one or more search terms first.');
+                 return false; };
+                 return true">
+                  <input id= "quickksearch-main" name= "quicksearch" title= "Quick Search" placeholder= "Enter the customer name" autofocus required>
+                  <input id= "find" type= "submit" value= "Quick Search">
+              </form>
+          </div>
+
+          <div id= "footer">
+          <ul class= "nav-links-footer">
+            <li class= "link-footer"><a href= "#">Home  </a></li>
+            <li class= "link-footer"><a href= "#">New  </a></li>
+            <li class= "link-footer"><a href= "#">Browse  </a></li>
+            <li class= "link-footer"><a href= "#">Search  </a></li>
+            <li class= "link-footer"><a href= "#">Reports  </a></li>
+
+            <li class= "link-footer"><a href= "#">Preferences  </a></li>
+            <li class= "link-footer"><a href= "#" style= "margin-right: 1ex;">Log out  </a>"adriana.olteanu@vodafone.com"</li>
+            <!--<li class= "link"><a href= "#">Log out</a></li> -->
+        </ul>
+    </div>
+</body>
+
+</html>

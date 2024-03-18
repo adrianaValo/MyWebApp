@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>IP/MPLS</title>
+  
+    <link rel="stylesheet" href="ip-mpls.css" type="text/css">
+    
+</head>
+
+<body>
+
+    <nav>
+    
+    <div class= "dropdown">
+        <div class= "select">
+            <span class= "selected">Net/Location</span>
+            <div class= "caret"></div>
+        </div>
+
+       <!--<ul class= "menu">
+            <li>VPN</li>
+            <li>Location</li>
+            <li>IPv4-Subnet</li>
+            <li class= "active">Net/Location</li>
+            <li>IPv6-Subnet</li>
+        </ul>--> 
+
+        <ul class= "menu">
+            <li class= "active">VPN</li>
+            <li>Location</li>
+            <li>IPv4-Subnet</li>
+            <li>IPv6-Subnet</li>
+            
+        </ul>
+
+    </div>
+
+    <div class= "dropdown">
+        <div class= "select">
+            <span class= "selected">Router/Interfaces</span>
+            <div class= "caret"></div>
+        </div>
+
+        <ul class= "menu">
+            <li  class= "active">Router</li>
+            <li>Interfaces</li>
+            <li>Router-Attribute</li>
+                    
+        </ul>
+
+    </div>
+
+    <div class= "dropdown">
+        <div class= "select">
+            <span class= "selected">Connections/Access</span>
+            <div class= "caret"></div>
+        </div>
+
+        <ul class= "menu">
+            <li  class= "active">CE-Connection</li>
+            <li>Tunnel-Connection</li>
+            <li>L1-Connection</li>
+            <li>CE-CE-Connection</li>                   
+        </ul>
+    </div>
+
+</nav>
+
+<!--Table with the last orders-->
+
+<section class="main">
+   
+    <section class="orders-section">
+      <div class="orders-list">
+        <h1>Recent Orders</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Order Type</th>
+              <th>Status</th>
+              <th>Object ID</th>
+              <th>Start Time</th>
+              <th>Completed Time</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Create</td>
+              <td>Succeeded</td>
+              <td>02-24-24</td>
+              <td>8:00AM</td>
+              <td>8:01PM</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr class="active-line">
+              <td>02</td>
+              <td>Delete</td>
+              <td>Succeeded</td>
+              <td>02-24-24</td>
+              <td>9:00AM</td>
+              <td>9:01AM</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Modify</td>
+              <td>Failed</td>
+              <td>02-24-24</td>
+              <td>8:00AM</td>
+              <td>8:01AM</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>Create</td>
+              <td>Succeeded</td>
+              <td>02-24-24</td>
+              <td>8:00AM</td>
+              <td>8:01AM</td>
+              <td><button>View</button></td>
+            </tr>
+             <tr >
+              <td>05</td>
+              <td>Get</td>
+              <td>Succeeded</td>
+              <td>02-24-24</td>
+              <td>9:00AM</td>
+              <td>9:01AM</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr >
+              <td>06</td>
+              <td>Delete</td>
+              <td>Succeeded</td>
+              <td>02-24-24</td>
+              <td>9:00AM</td>
+              <td>9:01AM</td>
+              <td><button>View</button></td>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+    </section>
+ 
+
+
+   
+    <script src= "ip-mpls.js"></script>
+</body>
+
+</html>
