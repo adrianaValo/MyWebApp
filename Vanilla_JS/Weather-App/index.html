@@ -46,7 +46,10 @@
 
     <script>
 
-        const apiKey = "2cf23054f2910c9c4eaa9c617e53421a";
+        // Load environment variables from .env file
+        //require('dotenv').config();
+
+        const apiKey = process.env.API_KEY;
         const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
         const searchBox = document.querySelector(".search input");
